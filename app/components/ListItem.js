@@ -1,24 +1,27 @@
-import React from 'react'
-import { StyleSheet, Image, View } from 'react-native'
+import React from 'react';
+import { StyleSheet, Image, View, TouchableHighlight } from 'react-native';
 
-import colors from '../config/colors'
-import AppText from './AppText'
+import colors from '../config/colors';
+import AppText from './AppText';
 
-export default function ListItem({ image, title, subTitle }) {
+export default function ListItem({ image, title, subTitle, onPress }) {
     return (
-        <View style={styles.container}>
-            <Image style={styles.image} source={image}></Image>
-            <View>
-                <AppText style={styles.title}>{title}</AppText>
-                <AppText style={styles.subTitle}>{subTitle}</AppText>
+        <TouchableHighlight underlayColor={colors.light} onPress={onPress}>
+            <View style={styles.container}>
+                <Image style={styles.image} source={image}></Image>
+                <View>
+                    <AppText style={styles.title}>{title}</AppText>
+                    <AppText style={styles.subTitle}>{subTitle}</AppText>
+                </View>
             </View>
-        </View>
+        </TouchableHighlight>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        paddingTop: 10
     },
     image: {
         width: 70,
