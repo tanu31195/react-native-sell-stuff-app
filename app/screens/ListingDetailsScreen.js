@@ -15,7 +15,6 @@ export default function ListingDetailsScreen() {
             </View>
             <View style={styles.userContainer}>
                 <ListItem
-                // TODO Adding images
                     image={require('../assets/profile.png')}
                     title='Tanushka Bandara'
                     subTitle='5 Listings'
