@@ -36,3 +36,8 @@ Simply passing a reference of the component, we cannot set props this way
 `renderRightActions={ListItemDeleteAction}`
 Pass a function and render the component so we can pass props
 `renderRightActions={() => <ListItemDeleteAction />}`
+
+If key and value are same as shown below,
+`backgroundColor: backgroundColor`
+we can just use the value
+`backgroundColor`

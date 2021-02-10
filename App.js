@@ -8,13 +8,19 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import Card from './app/components/Card';
 import MessagesScreen from './app/screens/MessagesScreen';
+import AppScreen from './app/components/AppScreen';
+import Icon from './app/components/Icon';
 
 export default function App({ }) {
   return (
     // <View style={{ backgroundColor: '#f8f4f4', padding: 20 }}>
     //   <Card title='Red jacket' subTitle='$100' image={require('./app/assets/jacket.jpg')} />
     // </View>
-    <MessagesScreen />
+    <AppScreen> 
+    <Icon 
+      name='email'
+    />
+    </AppScreen>
   );
 }
 
