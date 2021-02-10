@@ -29,9 +29,9 @@ const initialMessages = [
 
 export default function MessagesScreen() {
     const [messages, setMessages] = useState(initialMessages);
+    const [refreshing, setRefreshing] = useState(false);
 
     const handleDelete = message => {
-        //Delete message from messages
         console.log(message);
         setMessages(messages.filter((m) => m.id !== message.id));
     }
@@ -50,6 +50,8 @@ export default function MessagesScreen() {
                         renderRightActions={() => <ListItemDeleteAction onPress={() => handleDelete(item)} />}
                     />}
                 ItemSeparatorComponent={ListItemSeparator}
+                refreshing={refreshing}
+                onRefresh={() => setMessages(initialMessages)}
             />
         </AppScreen>
     )
