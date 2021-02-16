@@ -37,7 +37,7 @@ Simply passing a reference of the component, we cannot set props this way
 Pass a function and render the component so we can pass props
 `renderRightActions={() => <ListItemDeleteAction />}`
 
-If key and value are same as shown below,
+If key and value are same as shown below (Check Icon Component),
 `backgroundColor: backgroundColor`
-we can just use the value
+we can just use the shorthand value
 `backgroundColor`
