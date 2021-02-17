@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
+import React, { useState } from 'react';
+import { StyleSheet, Text, SafeAreaView, View, TextInput } from 'react-native';
 
 import AccountScreen from './app/screens/AccountScreen';
 import AppScreen from './app/components/AppScreen';
@@ -13,8 +13,9 @@ import Card from './app/components/Card';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import ListingsScreen from './app/screens/ListingsScreen';
+import AppTextInput from './app/components/AppTextInput';
 
-export default function App({ }) {
+export default function App() {
   return (
     // <View style={{ backgroundColor: '#f8f4f4', padding: 20 }}>
     //   <Card title='Red jacket' subTitle='$100' image={require('./app/assets/jacket.jpg')} />
@@ -22,7 +23,9 @@ export default function App({ }) {
     // <AppScreen> 
     // <ListItem title="Tanushka Bandara" subTitle="tanushkabandara@gmail.com" ImageComponent={<Icon name="email"/> }  />
     // </AppScreen>
-    <ListingsScreen></ListingsScreen>
+    <AppScreen>
+      <AppTextInput placeholder='Email' icon="email"/>
+    </AppScreen>
   );
 }
 

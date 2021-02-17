@@ -41,3 +41,16 @@ If key and value are same as shown below (Check Icon Component),
 `backgroundColor: backgroundColor`
 we can just use the shorthand value
 `backgroundColor`
+
+Inputs
+
+    <TextInput
+    style={styles.textInput}
+    placeholder="Pass code"
+    onChangeText={text => setFirstName(text)}
+    keyboardType="number-pad"
+    maxLength={5}
+    keyboardAppearance='dark'
+    clearButtonMode='always' //only works on iOS
+    secureTextEntry //this is same as secureTextEntry={true}
+     />
