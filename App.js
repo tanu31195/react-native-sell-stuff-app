@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, SafeAreaView, View, TextInput } from 'react-native';
+import { StyleSheet, Text, SafeAreaView, View, TextInput, Switch } from 'react-native';
 
 import AccountScreen from './app/screens/AccountScreen';
 import AppScreen from './app/components/AppScreen';
@@ -16,6 +16,7 @@ import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
+  // const { isNew, setIsNew } = useState(false);
   return (
     // <View style={{ backgroundColor: '#f8f4f4', padding: 20 }}>
     //   <Card title='Red jacket' subTitle='$100' image={require('./app/assets/jacket.jpg')} />
@@ -25,6 +26,7 @@ export default function App() {
     // </AppScreen>
     <AppScreen>
       <AppTextInput placeholder='Email' icon="email"/>
+      {/* <Switch value={isNew} onValueChange={newValue => setIsNew(newValue) } /> */}
     </AppScreen>
   );
 }
