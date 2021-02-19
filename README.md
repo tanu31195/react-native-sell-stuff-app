@@ -2,6 +2,12 @@
 
 ## Notes
 
+React native can only return one component so we can wrap components using React.Fragment
+    <React.Fragment>
+        ...
+    </React.Fragment>
+or we can use `<> ... </>`
+
 Multiples styles can be passed as an array
 `style={[styles.button, {backgroundColor: colors[color]}]}`
 
@@ -42,7 +48,9 @@ If key and value are same as shown below (Check Icon Component),
 we can just use the shorthand value
 `backgroundColor`
 
-Inputs
+### Inputs
+
+## TextInput
 
     <TextInput
     style={styles.textInput}
@@ -53,4 +61,33 @@ Inputs
     keyboardAppearance='dark'
     clearButtonMode='always' //only works on iOS
     secureTextEntry //this is same as secureTextEntry={true}
+    keyboardType='email-address' 
+    placeholderTextColor='green' 
+    returnKeyType='emergency-call' 
+    textContentType='oneTimeCode'
      />
+
+## Switch
+
+    <Switch 
+    value={isNew} 
+    onValueChange={newValue => setIsNew(newValue) } 
+    ios_backgroundColor='red' 
+    thumbColor='blue' 
+    />
+
+## Picker
+
+<https://reactnative.directory/?search=picker>
+<https://github.com/react-native-picker/picker>
+
+`npm install @react-native-picker/picker --save`
+
+iOS
+CocoaPods on iOS needs this extra step
+
+`npx pod-install`
+
+Above picker cannot be used as it's not part of the expo eco system, but we can use it by ejecting expo
+
+`expo install @react-native-community/datetimepicker`

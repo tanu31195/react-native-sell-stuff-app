@@ -14,19 +14,26 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
+
+const categories = [
+  { label: 'iPhones', value: 1 },
+  { label: 'iPads', value: 2 },
+  { label: 'iPods', value: 3 },
+]
 
 export default function App() {
-  // const { isNew, setIsNew } = useState(false);
+  const [category, setCategory] = useState(categories[0])
   return (
-    // <View style={{ backgroundColor: '#f8f4f4', padding: 20 }}>
-    //   <Card title='Red jacket' subTitle='$100' image={require('./app/assets/jacket.jpg')} />
-    // </View>
-    // <AppScreen> 
-    // <ListItem title="Tanushka Bandara" subTitle="tanushkabandara@gmail.com" ImageComponent={<Icon name="email"/> }  />
-    // </AppScreen>
     <AppScreen>
-      <AppTextInput placeholder='Email' icon="email"/>
-      {/* <Switch value={isNew} onValueChange={newValue => setIsNew(newValue) } /> */}
+      <AppPicker
+        icon='apps'
+        items={categories}
+        onSelectItem={item => setCategory(item)}
+        placeholder='Category'
+        selectedItem={category}
+      />
+      <AppTextInput icon='email' placeholder='Email' />
     </AppScreen>
   );
 }
