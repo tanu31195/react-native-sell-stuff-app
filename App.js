@@ -15,26 +15,11 @@ import ListItem from './app/components/ListItem';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
-
-const categories = [
-  { label: 'iPhones', value: 1 },
-  { label: 'iPads', value: 2 },
-  { label: 'iPods', value: 3 },
-]
+import LoginScreen from './app/screens/LoginScreen';
 
 export default function App() {
-  const [category, setCategory] = useState(categories[0])
   return (
-    <AppScreen>
-      <AppPicker
-        icon='apps'
-        items={categories}
-        onSelectItem={item => setCategory(item)}
-        placeholder='Category'
-        selectedItem={category}
-      />
-      <AppTextInput icon='email' placeholder='Email' />
-    </AppScreen>
+    <LoginScreen />
   );
 }
 
