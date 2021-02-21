@@ -48,9 +48,9 @@ If key and value are same as shown below (Check Icon Component),
 we can just use the shorthand value
 `backgroundColor`
 
-### Inputs
+## Inputs
 
-## TextInput
+### TextInput
 
     <TextInput
     style={styles.textInput}
@@ -67,7 +67,7 @@ we can just use the shorthand value
     textContentType='oneTimeCode'
      />
 
-## Switch
+### Switch
 
     <Switch 
     value={isNew} 
@@ -76,7 +76,7 @@ we can just use the shorthand value
     thumbColor='blue' 
     />
 
-## Picker
+### Picker
 
 <https://reactnative.directory/?search=picker>
 <https://github.com/react-native-picker/picker>
@@ -91,3 +91,7 @@ CocoaPods on iOS needs this extra step
 Above picker cannot be used as it's not part of the expo eco system, but we can use it by ejecting expo
 
 `expo install @react-native-community/datetimepicker`
+
+## Forms <https://formik.org/docs/overview>
+
+`npm i formik`
