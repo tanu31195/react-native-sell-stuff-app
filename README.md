@@ -95,3 +95,14 @@ Above picker cannot be used as it's not part of the expo eco system, but we can 
 ## Forms <https://formik.org/docs/overview>
 
 `npm i formik`
+
+### Form validation <https://www.npmjs.com/package/yup>
+
+`npm i  yup`
+
+<https://stackoverflow.com/questions/55451304/formik-yup-password-strength-validation-with-react>
+
+    .matches(
+    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+    'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character')
+
