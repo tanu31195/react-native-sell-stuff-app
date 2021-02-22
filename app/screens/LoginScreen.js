@@ -26,7 +26,7 @@ export default function LoginScreen() {
                 onSubmit={values => console.log(values)}
                 validationSchema={validationSchema}
             >
-                {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+                {() => (
                     <>
                         <AppFormField
                             autoCapitalize='none'
@@ -46,7 +46,7 @@ export default function LoginScreen() {
                             secureTextEntry
                             textContentType='password'
                         />
-                        <AppButton onPress={handleSubmit} title='Login' />
+                        <AppSubmitButton title='Login' />
                     </>
                 )}
             </Formik>
