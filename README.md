@@ -106,3 +106,5 @@ Above picker cannot be used as it's not part of the expo eco system, but we can 
     /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
     'Must Contain 8 Characters, One Uppercase, One Lowercase, One Number and one special case Character')
 
+Use [] to access a property by a name
+`<ErrorMessage error={errors[name]} visible={touched[name]} />`
