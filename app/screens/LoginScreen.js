@@ -34,6 +34,7 @@ export default function LoginScreen() {
                     name='email'
                     placeholder='Email'
                     textContentType='emailAddress'
+                    clearButtonMode='always'
                 />
                 <AppFormField
                     autoCapitalize='none'
@@ -43,6 +44,7 @@ export default function LoginScreen() {
                     placeholder='Password'
                     secureTextEntry
                     textContentType='password'
+                    clearButtonMode='always'
                 />
                 <AppSubmitButton title='Login' />
             </AppForm>
