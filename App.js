@@ -11,7 +11,7 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import Icon from './app/components/Icon';
-import ListItem from './app/components/ListItem';
+import ListItem from './app/components/lists/ListItem';
 import ListingsScreen from './app/screens/ListingsScreen';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';

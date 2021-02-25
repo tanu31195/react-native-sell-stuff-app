@@ -1,7 +1,8 @@
-import React from 'react'
-import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native'
+import React from 'react';
+import { ImageBackground, StyleSheet, Text, View, Image } from 'react-native';
 
 import AppButton from '../components/AppButton';
+import colors from '../config/colors';
 
 export default function WelcomeScreen() {
     return (
@@ -12,7 +13,7 @@ export default function WelcomeScreen() {
             </View>
             <View style={styles.buttonContainer}>
                 <AppButton title='Login' color='primary' onPress={() => console.log('Login Pressed')} />
-                <AppButton title='Register' color='secondary' onPress={() => console.log('Login Pressed')} />
+                <AppButton title='Register' color='secondary' onPress={() => console.log('Register Pressed')} />
             </View>
         </ImageBackground>
     )
@@ -40,7 +41,7 @@ const styles = StyleSheet.create({
     registerButton: {
         width: '100%',
         height: 70,
-        backgroundColor: '#4ecdc4',
+        backgroundColor:  colors.secondary,
     },
     tagline: {
         fontSize: 25,

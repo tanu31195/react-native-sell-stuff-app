@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { StyleSheet, FlatList, View } from 'react-native';
+import { StyleSheet, FlatList } from 'react-native';
 
 import AppScreen from '../components/AppScreen';
-import ListItem from '../components/ListItem';
-import ListItemDeleteAction from '../components/ListItemDeleteAction';
-import ListItemSeparator from '../components/ListItemSeparator';
+import { ListItem, ListItemDeleteAction, ListItemSeparator } from '../components/lists';
 
 const initialMessages = [
     {
@@ -37,7 +35,7 @@ export default function MessagesScreen() {
     }
 
     return (
-        <AppScreen>
+        <AppScreen style={styles.container}>
             <FlatList
                 data={messages}
                 keyExtractor={message => message.id.toString()}
@@ -58,5 +56,7 @@ export default function MessagesScreen() {
 }
 
 const styles = StyleSheet.create({
-
+    container: {
+        flex: 1
+    }
 })

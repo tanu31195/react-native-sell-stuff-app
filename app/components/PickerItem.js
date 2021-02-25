@@ -1,6 +1,6 @@
-import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
-import AppText from './AppText'
+import React from 'react';
+import { StyleSheet, TouchableOpacity } from 'react-native';
+import AppText from './AppText';
 
 export default function PickerItem({label, onPress}) {
     return (
