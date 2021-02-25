@@ -108,3 +108,15 @@ Above picker cannot be used as it's not part of the expo eco system, but we can 
 
 Use [] to access a property by a name
 `<ErrorMessage error={errors[name]} visible={touched[name]} />`
+
+### Importing and re-exporting components (forms/index.js)
+
+    import AppForm from './AppForm'
+    import AppFormField from './AppFormField'
+
+    export { AppForm, AppFormField };
+
+or
+
+    export { default as AppForm } from './AppForm';
+    export { default as AppFormField } from './AppFormField';
