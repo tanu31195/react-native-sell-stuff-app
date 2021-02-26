@@ -48,6 +48,8 @@ If key and value are same as shown below (Check Icon Component),
 we can just use the shorthand value
 `backgroundColor`
 
+<https://icons.expo.fyi/>
+
 ## Inputs
 
 ### TextInput
