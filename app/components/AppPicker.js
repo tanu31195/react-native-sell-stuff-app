@@ -7,12 +7,12 @@ import AppText from './AppText';
 import AppScreen from './AppScreen';
 import PickerItem from './PickerItem';
 
-export default function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem }) {
+export default function AppPicker({ icon, items, onSelectItem, placeholder, selectedItem, width = '100%' }) {
     const [modalVisible, setModalVisible] = useState(false);
     return (
         <>
             <TouchableWithoutFeedback onPress={() => setModalVisible(true)}>
-                <View style={styles.container}>
+                <View style={[styles.container, { width }]}>
                     {icon && (<MaterialCommunityIcons style={styles.icon} name={icon} size={20} color={defaultStyles.colors.medium} />)}
                     {
                         selectedItem ?
@@ -47,7 +47,6 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: defaultStyles.colors.light,
         flexDirection: 'row',
-        width: '100%',
         padding: 15,
         marginVertical: 10,
         borderRadius: 25,

@@ -13,8 +13,8 @@ const initialMessages = [
     },
     {
         id: 2,
-        title: 'T2',
-        description: 'D2',
+        title: 'T2 Minim excepteur sunt duis esse non irure ullamco id. Ut aliqua sit sit consectetur dolore ipsum. Anim minim eiusmod eu amet. Id non voluptate aliqua magna enim exercitation ipsum.',
+        description: 'D2 Laborum consequat amet consectetur cupidatat enim proident consequat. Sunt adipisicing elit mollit mollit exercitation commodo occaecat deserunt enim id velit est sint. Irure sunt esse velit quis nulla proident.',
         image: require('../assets/profile.png')
     },
     {
@@ -35,7 +35,7 @@ export default function MessagesScreen() {
     }
 
     return (
-        <AppScreen style={styles.container}>
+        <AppScreen>
             <FlatList
                 data={messages}
                 keyExtractor={message => message.id.toString()}
@@ -55,8 +55,4 @@ export default function MessagesScreen() {
     )
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    }
-})
+const styles = StyleSheet.create({})
